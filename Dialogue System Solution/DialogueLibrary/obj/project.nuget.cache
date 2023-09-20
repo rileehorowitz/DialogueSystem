@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3WodI+i/kTZqpODcW6I7D15PVtNnZ7u4uAXLaPgIoa5oSVPKuSt2bZewJzgFTrMvMFQNOfOvRo9sseNEBv7lNQ==",
+  "dgSpecHash": "d65O5Ga3vCrrymTOC6UJdZAvoxf0owN7VcGpIKP6Mp/8hqhJr8Mnbpx9DtupQCCzENnj7r9duYzqaAi6IUHUAg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Student\\workspace\\rilee-horowitz-student-code\\rilee-horowitz-side-projects\\Dialogue System\\Dialogue System\\DialogueLibrary\\DialogueLibrary.csproj",
+  "projectFilePath": "C:\\Users\\Student\\workspace\\rilee-horowitz-side-projects\\DialogueSystem\\Dialogue System Solution\\DialogueLibrary\\DialogueLibrary.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

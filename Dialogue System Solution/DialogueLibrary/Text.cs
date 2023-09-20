@@ -8,17 +8,27 @@ namespace DialogueLibrary
 {
     public class Text
     {
-        private string text;
-        private Speaker speaker;
+        private string dialogueText;
+        private Speaker textSpeaker;
 
         public Text(string dialogueText, Speaker textSpeaker)
         {
-            text = dialogueText;
-            speaker = textSpeaker;
+            this.dialogueText = dialogueText;
+            this.textSpeaker = textSpeaker;
         }
         public override string ToString() 
         {
-            return $"{speaker}\n{text}";
+            return $"{TextSpeaker}\n{DialogueText}";
+        }
+
+        //Read Only properties to access dialogueText and textSpeaker
+        public string DialogueText
+        {
+            get => dialogueText;
+        }
+        public Speaker TextSpeaker
+        {
+            get => textSpeaker;
         }
     }
 }

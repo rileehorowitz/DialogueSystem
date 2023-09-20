@@ -10,21 +10,12 @@ namespace DialogueLibrary
     {
         private DialogueNode firstNode;
 
-        public Scene(DialogueNode firstNode)
-        {
-            FirstNode = firstNode;
-        }
+        public Scene(DialogueNode firstNode) => this.firstNode = firstNode;
 
+        //Read Only public property to access firstNode
         public DialogueNode FirstNode
         {
-            get
-            {
-                return firstNode;
-            }
-            set
-            {
-                firstNode = value;
-            }
+            get => firstNode;
         }
     }
 }

@@ -2,8 +2,8 @@
 {
     public class Speaker
     {
-        private string name;
-        private string? colorCode;
+        private string speakerName;
+        private string colorCode = "\u001b[37m";
         private Dictionary<string, string> colorOptions = new Dictionary<string, string>()
         {
             {"black", "\u001b[30m"},
@@ -17,15 +17,11 @@
         };
         //also hold variables to reference image or font
 
-        public Speaker(string speakerName)
-        {
-            name = speakerName;
-            AssignColor("white");
-        }
+        public Speaker(string speakerName) => this.speakerName = speakerName;
 
         public Speaker(string speakerName, string textColor)
         {
-            name = speakerName;
+            this.speakerName = speakerName;
             AssignColor(textColor);
         }
 
@@ -43,8 +39,17 @@
         }
         public override string ToString()
         {
-            return $"{colorCode}{name}\u001b[0m";
+            return $"{ColorCode}{SpeakerName}:\u001b[0m";
         }
 
+        //Read Only public properties to access speakerName and colorCode
+        public string SpeakerName
+        {
+            get => speakerName;
+        }
+        public string ColorCode
+        {
+            get => colorCode;
+        }
     }
 }

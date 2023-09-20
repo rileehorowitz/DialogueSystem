@@ -13,25 +13,24 @@ namespace DialogueLibrary
         public DialogueNodeBasic(DialogueNode nextNode, Text text)
             : base(text)
         {
-            NextNode = nextNode;
+            this.nextNode = nextNode;
         }
-        //setting the public property of DialogueNodeBasic called NextNode 
-        public DialogueNode NextNode
+
+        //Read Only public property to access nextNode
+        public override DialogueNode NextNode
         {
-            get
-            {
-                return nextNode;
-            }
-            set
-            {
-                nextNode = value;
-            }
+            get => nextNode;
         }
 
         //When attempting to move to a new node, check if the new node is our current node's next node
         public override bool CanBeFollowedByNode(DialogueNode node)
         {
             return nextNode == node;
+        }
+
+        public override DialogueNode GetNextNode()
+        {
+            return NextNode;
         }
     }
 }

@@ -31,3 +31,14 @@ C:\Users\Student\workspace\rilee-horowitz-student-code\rilee-horowitz-side-proje
 C:\Users\Student\workspace\rilee-horowitz-student-code\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueLibrary\obj\Debug\net7.0\refint\DialogueLibrary.dll
 C:\Users\Student\workspace\rilee-horowitz-student-code\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueLibrary\obj\Debug\net7.0\DialogueLibrary.pdb
 C:\Users\Student\workspace\rilee-horowitz-student-code\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueLibrary\obj\Debug\net7.0\ref\DialogueLibrary.dll
+C:\Users\Student\workspace\rilee-horowitz-side-projects\DialogueSystem\Dialogue System Solution\DialogueLibrary\bin\Debug\net7.0\DialogueLibrary.deps.json
+C:\Users\Student\workspace\rilee-horowitz-side-projects\DialogueSystem\Dialogue System Solution\DialogueLibrary\bin\Debug\net7.0\DialogueLibrary.dll
+C:\Users\Student\workspace\rilee-horowitz-side-projects\DialogueSystem\Dialogue System Solution\DialogueLibrary\bin\Debug\net7.0\DialogueLibrary.pdb
+C:\Users\Student\workspace\rilee-horowitz-side-projects\DialogueSystem\Dialogue System Solution\DialogueLibrary\obj\Debug\net7.0\DialogueLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Student\workspace\rilee-horowitz-side-projects\DialogueSystem\Dialogue System Solution\DialogueLibrary\obj\Debug\net7.0\DialogueLibrary.AssemblyInfoInputs.cache
+C:\Users\Student\workspace\rilee-horowitz-side-projects\DialogueSystem\Dialogue System Solution\DialogueLibrary\obj\Debug\net7.0\DialogueLibrary.AssemblyInfo.cs
+C:\Users\Student\workspace\rilee-horowitz-side-projects\DialogueSystem\Dialogue System Solution\DialogueLibrary\obj\Debug\net7.0\DialogueLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Student\workspace\rilee-horowitz-side-projects\DialogueSystem\Dialogue System Solution\DialogueLibrary\obj\Debug\net7.0\DialogueLibrary.dll
+C:\Users\Student\workspace\rilee-horowitz-side-projects\DialogueSystem\Dialogue System Solution\DialogueLibrary\obj\Debug\net7.0\refint\DialogueLibrary.dll
+C:\Users\Student\workspace\rilee-horowitz-side-projects\DialogueSystem\Dialogue System Solution\DialogueLibrary\obj\Debug\net7.0\DialogueLibrary.pdb
+C:\Users\Student\workspace\rilee-horowitz-side-projects\DialogueSystem\Dialogue System Solution\DialogueLibrary\obj\Debug\net7.0\ref\DialogueLibrary.dll
