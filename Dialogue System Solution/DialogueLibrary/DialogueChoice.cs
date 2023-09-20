@@ -23,7 +23,7 @@ namespace DialogueLibrary
         }
 
         //Read Only public properties to access NextNode and ChoicePreview
-        public DialogueNode NextNode
+        public DialogueNode ChoiceNode
         {
             get => choiceNode;
         }

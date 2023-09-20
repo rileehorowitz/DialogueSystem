@@ -27,8 +27,6 @@ namespace DialogueLibrary
 
         public abstract bool CanBeFollowedByNode(DialogueNode node);
 
-        public abstract DialogueNode GetNextNode();
-
         public override string ToString()
         {
             return $"{Text}";

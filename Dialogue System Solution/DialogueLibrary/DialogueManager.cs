@@ -26,7 +26,7 @@ namespace DialogueLibrary
             }
             //Else, we're already in a scene
         }
-        public void EndScene()
+        private void EndScene()
         {
             if (currentScene != null)
             {
@@ -34,7 +34,7 @@ namespace DialogueLibrary
             }
             //Else, we aren't in a scene
         }
-        public void StartNode(DialogueNode node)
+        private void StartNode(DialogueNode node)
         {
             currentNode = node;
 
@@ -49,21 +49,19 @@ namespace DialogueLibrary
             
         }
         //Called when a the current node has receieved input and its time to move to the next node.
-        public void MoveToNode(DialogueNode node)
+        private void MoveToNode(DialogueNode node)
         {
             StartNode(node);
         }
 
-        public string ReadNode(DialogueNode node)
+        private string ReadNode(DialogueNode node)
         {
-            string output = $"{node}";
+            string output = $"{node}\n";
             Console.WriteLine(output);
-            Console.ReadLine();
-            //STILL DOES NOT HAVE LOGIC FOR CHOICE
+                        
             MoveToNode(node.NextNode);
 
             return output;
-            //print the node's text, take user input, then move to the next node
         }
     }
 }

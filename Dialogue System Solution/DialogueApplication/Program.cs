@@ -25,6 +25,36 @@ namespace DialogueApplication
             Scene sceneOne = new Scene(dialogueNodeOne);
             DialogueManager manager = new DialogueManager(sceneOne);
 
+            Text cTextOne = new Text("Hello, World!", speakerOne);
+            Text cTextTwo = new Text("Hello, Rilee!", speakerTwo);
+            Text cTextThreeA = new Text("Woah, who said that?", speakerOne);
+            Text cTextThreeB = new Text("Oh my god, the world in \"Hello, World!\" can talk? I'm such a huge fan.", speakerOne);
+            Text cTextFourA = new Text("It's me, the world from \"Hello, World!\" Don't you like me?", speakerTwo);
+            Text cTextFourB = new Text("Well, I do love meeting my fans. I'm glad you like me!", speakerTwo);
+            Text cTextFive = new Text("I like you a lot, World. <3", speakerOne);
+
+            DialogueNodeBasic choiceNodeFive = new DialogueNodeBasic(null, cTextFive);
+
+            DialogueNodeBasic choiceNodeFourA = new DialogueNodeBasic(choiceNodeFive, cTextFourA);
+            DialogueNodeBasic choiceNodeFourB = new DialogueNodeBasic(choiceNodeFive, cTextFourB);
+
+            DialogueNodeBasic choiceNodeThreeA = new DialogueNodeBasic(choiceNodeFourA, cTextThreeA);
+            DialogueNodeBasic choiceNodeThreeB = new DialogueNodeBasic(choiceNodeFourB, cTextThreeB);
+
+            DialogueChoice choiceOne = new DialogueChoice("Who Said That?", choiceNodeThreeA);
+            DialogueChoice choiceTwo = new DialogueChoice("Huge Fan", choiceNodeThreeB);
+
+            DialogueChoice[] choices = new DialogueChoice[2]{
+                choiceOne,
+                choiceTwo
+            };
+
+            DialogueNodeChoice choiceNodeTwo = new DialogueNodeChoice(choices, cTextTwo);
+            DialogueNodeBasic choiceNodeOne = new DialogueNodeBasic(choiceNodeTwo, cTextOne);
+
+            Scene sceneTwo = new Scene(choiceNodeOne);
+            manager.StartScene(sceneTwo);
+
         }
     }
 }
