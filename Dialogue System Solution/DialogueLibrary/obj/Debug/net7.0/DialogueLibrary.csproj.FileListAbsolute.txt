@@ -1,0 +1,33 @@
+C:\Users\Student\source\repos\Dialogue System\DialogueLibrary\bin\Debug\net7.0\DialogueLibrary.deps.json
+C:\Users\Student\source\repos\Dialogue System\DialogueLibrary\bin\Debug\net7.0\DialogueLibrary.dll
+C:\Users\Student\source\repos\Dialogue System\DialogueLibrary\bin\Debug\net7.0\DialogueLibrary.pdb
+C:\Users\Student\source\repos\Dialogue System\DialogueLibrary\obj\Debug\net7.0\DialogueLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Student\source\repos\Dialogue System\DialogueLibrary\obj\Debug\net7.0\DialogueLibrary.AssemblyInfoInputs.cache
+C:\Users\Student\source\repos\Dialogue System\DialogueLibrary\obj\Debug\net7.0\DialogueLibrary.AssemblyInfo.cs
+C:\Users\Student\source\repos\Dialogue System\DialogueLibrary\obj\Debug\net7.0\DialogueLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Student\source\repos\Dialogue System\DialogueLibrary\obj\Debug\net7.0\DialogueLibrary.dll
+C:\Users\Student\source\repos\Dialogue System\DialogueLibrary\obj\Debug\net7.0\refint\DialogueLibrary.dll
+C:\Users\Student\source\repos\Dialogue System\DialogueLibrary\obj\Debug\net7.0\DialogueLibrary.pdb
+C:\Users\Student\source\repos\Dialogue System\DialogueLibrary\obj\Debug\net7.0\ref\DialogueLibrary.dll
+C:\Users\Student\workspace\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueLibrary\bin\Debug\net7.0\DialogueLibrary.deps.json
+C:\Users\Student\workspace\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueLibrary\bin\Debug\net7.0\DialogueLibrary.dll
+C:\Users\Student\workspace\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueLibrary\bin\Debug\net7.0\DialogueLibrary.pdb
+C:\Users\Student\workspace\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueLibrary\obj\Debug\net7.0\DialogueLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Student\workspace\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueLibrary\obj\Debug\net7.0\DialogueLibrary.AssemblyInfoInputs.cache
+C:\Users\Student\workspace\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueLibrary\obj\Debug\net7.0\DialogueLibrary.AssemblyInfo.cs
+C:\Users\Student\workspace\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueLibrary\obj\Debug\net7.0\DialogueLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Student\workspace\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueLibrary\obj\Debug\net7.0\DialogueLibrary.dll
+C:\Users\Student\workspace\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueLibrary\obj\Debug\net7.0\refint\DialogueLibrary.dll
+C:\Users\Student\workspace\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueLibrary\obj\Debug\net7.0\DialogueLibrary.pdb
+C:\Users\Student\workspace\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueLibrary\obj\Debug\net7.0\ref\DialogueLibrary.dll
+C:\Users\Student\workspace\rilee-horowitz-student-code\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueLibrary\bin\Debug\net7.0\DialogueLibrary.deps.json
+C:\Users\Student\workspace\rilee-horowitz-student-code\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueLibrary\bin\Debug\net7.0\DialogueLibrary.dll
+C:\Users\Student\workspace\rilee-horowitz-student-code\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueLibrary\bin\Debug\net7.0\DialogueLibrary.pdb
+C:\Users\Student\workspace\rilee-horowitz-student-code\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueLibrary\obj\Debug\net7.0\DialogueLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Student\workspace\rilee-horowitz-student-code\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueLibrary\obj\Debug\net7.0\DialogueLibrary.AssemblyInfoInputs.cache
+C:\Users\Student\workspace\rilee-horowitz-student-code\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueLibrary\obj\Debug\net7.0\DialogueLibrary.AssemblyInfo.cs
+C:\Users\Student\workspace\rilee-horowitz-student-code\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueLibrary\obj\Debug\net7.0\DialogueLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Student\workspace\rilee-horowitz-student-code\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueLibrary\obj\Debug\net7.0\DialogueLibrary.dll
+C:\Users\Student\workspace\rilee-horowitz-student-code\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueLibrary\obj\Debug\net7.0\refint\DialogueLibrary.dll
+C:\Users\Student\workspace\rilee-horowitz-student-code\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueLibrary\obj\Debug\net7.0\DialogueLibrary.pdb
+C:\Users\Student\workspace\rilee-horowitz-student-code\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueLibrary\obj\Debug\net7.0\ref\DialogueLibrary.dll

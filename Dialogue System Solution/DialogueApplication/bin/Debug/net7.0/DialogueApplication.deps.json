@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "DialogueApplication/1.0.0": {
+        "dependencies": {
+          "DialogueLibrary": "1.0.0"
+        },
+        "runtime": {
+          "DialogueApplication.dll": {}
+        }
+      },
+      "DialogueLibrary/1.0.0": {
+        "runtime": {
+          "DialogueLibrary.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DialogueApplication/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DialogueLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,54 @@
+C:\Users\Student\source\repos\Dialogue System\DialogueApplication\bin\Debug\net7.0\DialogueApplication.exe
+C:\Users\Student\source\repos\Dialogue System\DialogueApplication\bin\Debug\net7.0\DialogueApplication.deps.json
+C:\Users\Student\source\repos\Dialogue System\DialogueApplication\bin\Debug\net7.0\DialogueApplication.runtimeconfig.json
+C:\Users\Student\source\repos\Dialogue System\DialogueApplication\bin\Debug\net7.0\DialogueApplication.dll
+C:\Users\Student\source\repos\Dialogue System\DialogueApplication\bin\Debug\net7.0\DialogueApplication.pdb
+C:\Users\Student\source\repos\Dialogue System\DialogueApplication\bin\Debug\net7.0\DialogueLibrary.dll
+C:\Users\Student\source\repos\Dialogue System\DialogueApplication\bin\Debug\net7.0\DialogueLibrary.pdb
+C:\Users\Student\source\repos\Dialogue System\DialogueApplication\obj\Debug\net7.0\DialogueApplication.csproj.AssemblyReference.cache
+C:\Users\Student\source\repos\Dialogue System\DialogueApplication\obj\Debug\net7.0\DialogueApplication.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Student\source\repos\Dialogue System\DialogueApplication\obj\Debug\net7.0\DialogueApplication.AssemblyInfoInputs.cache
+C:\Users\Student\source\repos\Dialogue System\DialogueApplication\obj\Debug\net7.0\DialogueApplication.AssemblyInfo.cs
+C:\Users\Student\source\repos\Dialogue System\DialogueApplication\obj\Debug\net7.0\DialogueApplication.csproj.CoreCompileInputs.cache
+C:\Users\Student\source\repos\Dialogue System\DialogueApplication\obj\Debug\net7.0\DialogueApplication.csproj.CopyComplete
+C:\Users\Student\source\repos\Dialogue System\DialogueApplication\obj\Debug\net7.0\DialogueApplication.dll
+C:\Users\Student\source\repos\Dialogue System\DialogueApplication\obj\Debug\net7.0\refint\DialogueApplication.dll
+C:\Users\Student\source\repos\Dialogue System\DialogueApplication\obj\Debug\net7.0\DialogueApplication.pdb
+C:\Users\Student\source\repos\Dialogue System\DialogueApplication\obj\Debug\net7.0\DialogueApplication.genruntimeconfig.cache
+C:\Users\Student\source\repos\Dialogue System\DialogueApplication\obj\Debug\net7.0\ref\DialogueApplication.dll
+C:\Users\Student\workspace\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueApplication\bin\Debug\net7.0\DialogueApplication.exe
+C:\Users\Student\workspace\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueApplication\bin\Debug\net7.0\DialogueApplication.deps.json
+C:\Users\Student\workspace\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueApplication\bin\Debug\net7.0\DialogueApplication.runtimeconfig.json
+C:\Users\Student\workspace\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueApplication\bin\Debug\net7.0\DialogueApplication.dll
+C:\Users\Student\workspace\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueApplication\bin\Debug\net7.0\DialogueApplication.pdb
+C:\Users\Student\workspace\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueApplication\bin\Debug\net7.0\DialogueLibrary.dll
+C:\Users\Student\workspace\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueApplication\bin\Debug\net7.0\DialogueLibrary.pdb
+C:\Users\Student\workspace\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueApplication\obj\Debug\net7.0\DialogueApplication.csproj.AssemblyReference.cache
+C:\Users\Student\workspace\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueApplication\obj\Debug\net7.0\DialogueApplication.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Student\workspace\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueApplication\obj\Debug\net7.0\DialogueApplication.AssemblyInfoInputs.cache
+C:\Users\Student\workspace\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueApplication\obj\Debug\net7.0\DialogueApplication.AssemblyInfo.cs
+C:\Users\Student\workspace\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueApplication\obj\Debug\net7.0\DialogueApplication.csproj.CoreCompileInputs.cache
+C:\Users\Student\workspace\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueApplication\obj\Debug\net7.0\DialogueApplication.csproj.CopyComplete
+C:\Users\Student\workspace\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueApplication\obj\Debug\net7.0\DialogueApplication.dll
+C:\Users\Student\workspace\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueApplication\obj\Debug\net7.0\refint\DialogueApplication.dll
+C:\Users\Student\workspace\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueApplication\obj\Debug\net7.0\DialogueApplication.pdb
+C:\Users\Student\workspace\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueApplication\obj\Debug\net7.0\DialogueApplication.genruntimeconfig.cache
+C:\Users\Student\workspace\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueApplication\obj\Debug\net7.0\ref\DialogueApplication.dll
+C:\Users\Student\workspace\rilee-horowitz-student-code\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueApplication\bin\Debug\net7.0\DialogueApplication.exe
+C:\Users\Student\workspace\rilee-horowitz-student-code\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueApplication\bin\Debug\net7.0\DialogueApplication.deps.json
+C:\Users\Student\workspace\rilee-horowitz-student-code\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueApplication\bin\Debug\net7.0\DialogueApplication.runtimeconfig.json
+C:\Users\Student\workspace\rilee-horowitz-student-code\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueApplication\bin\Debug\net7.0\DialogueApplication.dll
+C:\Users\Student\workspace\rilee-horowitz-student-code\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueApplication\bin\Debug\net7.0\DialogueApplication.pdb
+C:\Users\Student\workspace\rilee-horowitz-student-code\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueApplication\bin\Debug\net7.0\DialogueLibrary.dll
+C:\Users\Student\workspace\rilee-horowitz-student-code\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueApplication\bin\Debug\net7.0\DialogueLibrary.pdb
+C:\Users\Student\workspace\rilee-horowitz-student-code\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueApplication\obj\Debug\net7.0\DialogueApplication.csproj.AssemblyReference.cache
+C:\Users\Student\workspace\rilee-horowitz-student-code\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueApplication\obj\Debug\net7.0\DialogueApplication.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Student\workspace\rilee-horowitz-student-code\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueApplication\obj\Debug\net7.0\DialogueApplication.AssemblyInfoInputs.cache
+C:\Users\Student\workspace\rilee-horowitz-student-code\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueApplication\obj\Debug\net7.0\DialogueApplication.AssemblyInfo.cs
+C:\Users\Student\workspace\rilee-horowitz-student-code\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueApplication\obj\Debug\net7.0\DialogueApplication.csproj.CoreCompileInputs.cache
+C:\Users\Student\workspace\rilee-horowitz-student-code\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueApplication\obj\Debug\net7.0\DialogueApplication.csproj.CopyComplete
+C:\Users\Student\workspace\rilee-horowitz-student-code\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueApplication\obj\Debug\net7.0\DialogueApplication.dll
+C:\Users\Student\workspace\rilee-horowitz-student-code\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueApplication\obj\Debug\net7.0\refint\DialogueApplication.dll
+C:\Users\Student\workspace\rilee-horowitz-student-code\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueApplication\obj\Debug\net7.0\DialogueApplication.pdb
+C:\Users\Student\workspace\rilee-horowitz-student-code\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueApplication\obj\Debug\net7.0\DialogueApplication.genruntimeconfig.cache
+C:\Users\Student\workspace\rilee-horowitz-student-code\rilee-horowitz-side-projects\Dialogue System\Dialogue System\DialogueApplication\obj\Debug\net7.0\ref\DialogueApplication.dll
