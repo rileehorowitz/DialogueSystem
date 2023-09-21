@@ -10,6 +10,7 @@ namespace DialogueLibrary
     {
         private string choicePreview;
         private DialogueNode choiceNode;
+        private bool condition;
 
         public DialogueChoice(string choicePreview, DialogueNode choiceNode)
         {

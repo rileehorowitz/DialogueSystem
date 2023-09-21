@@ -42,7 +42,7 @@ namespace DialogueApplication
             DialogueNodeBasic choiceNodeThreeB = new DialogueNodeBasic(choiceNodeFourB, cTextThreeB);
 
             DialogueChoice choiceOne = new DialogueChoice("Who Said That?", choiceNodeThreeA);
-            DialogueChoice choiceTwo = new DialogueChoice("Huge Fan", choiceNodeThreeB);
+            DialogueChoice choiceTwo = new DialogueChoice("World? I'm a Huge Fan", choiceNodeThreeB);
 
             DialogueChoice[] choices = new DialogueChoice[2]{
                 choiceOne,

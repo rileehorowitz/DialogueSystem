@@ -10,23 +10,42 @@ namespace DialogueLibrary
     public class DialogueNodeChoice : DialogueNode
     {
         private DialogueChoice[] choices;
+
+        //Read Only public property to access nextNode and choices
+        public override DialogueNode NextNode { get => MakeChoice(); }
+
+        public DialogueChoice[] Choices { get => choices; }
+
         public DialogueNodeChoice(DialogueChoice[] choices, Text text)
             : base(text)
         {
             this.choices = choices;
         }
 
-        public DialogueNode MakeChoice()
+        private DialogueNode MakeChoice()
         {
             bool isValidInput = false;
             int choice;
             do
             {
+                //clear any previous inputs
+                while (Console.KeyAvailable) Console.ReadKey(true);
+
                 ConsoleKeyInfo choiceKey = Console.ReadKey(true);
                 isValidInput = (Int32.TryParse(choiceKey.KeyChar.ToString(), out choice) && choice <= Choices.Length && choice > 0);
             } while (!isValidInput);
            
             return Choices[choice - 1].ChoiceNode;
+        }
+
+        public string GetChoicesText()
+        {
+            string output = "\n";
+            for (int i = 0; i < Choices.Length; i++)
+            {
+                output += $"\n{i + 1}. {Choices[i]}";
+            }
+            return output;
         }
 
         //When attempting to move to a new node, check if the new node is our current node's next node
@@ -38,26 +57,8 @@ namespace DialogueLibrary
         public override string ToString()
         {
             string output = $"{Text}";
-            for(int i = 0; i<Choices.Length; i++)
-            {
-                output += $"\n{i+1}. {Choices[i]}";
-            }
+            output += GetChoicesText();
             return output;
-        }
-
-        //Read Only public property to access nextNode
-        public override DialogueNode NextNode
-        {
-            get
-            {
-                return MakeChoice();
-            }
-        }
-
-        //Read Only public property to access choices
-        public DialogueChoice[] Choices
-        {
-            get => choices;
-        }
+        }   
     }
 }

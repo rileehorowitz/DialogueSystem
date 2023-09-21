@@ -16,7 +16,7 @@
             {"white", "\u001b[37m"}
         };
         //also hold variables to reference image or font
-
+        public Speaker() { }
         public Speaker(string speakerName) => this.speakerName = speakerName;
 
         public Speaker(string speakerName, string textColor)
@@ -46,10 +46,12 @@
         public string SpeakerName
         {
             get => speakerName;
+            set => speakerName = value;
         }
         public string ColorCode
         {
             get => colorCode;
+            set => AssignColor(value);
         }
     }
 }

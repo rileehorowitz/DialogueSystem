@@ -9,21 +9,12 @@ namespace DialogueLibrary
     public abstract class DialogueNode
     {
         private Text text;
-        private DialogueNode nextNode;
+        private DialogueNode? nextNode;
+        //Read Only public property to access text and nextNode
+        public Text Text { get => text; }
+        public abstract DialogueNode NextNode { get; }
 
         public DialogueNode(Text text) => this.text = text;
-
-        //Read Only public property to access text
-        public Text Text
-        {
-            get => text;
-        }
-
-        //Read Only public property to access nextNode
-        public abstract DialogueNode NextNode
-        {
-            get;
-        }
 
         public abstract bool CanBeFollowedByNode(DialogueNode node);
 

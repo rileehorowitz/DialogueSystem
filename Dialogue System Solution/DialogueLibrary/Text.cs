@@ -11,6 +11,7 @@ namespace DialogueLibrary
         private string dialogueText;
         private Speaker textSpeaker;
 
+        public Text() { }
         public Text(string dialogueText, Speaker textSpeaker)
         {
             this.dialogueText = dialogueText;
@@ -18,17 +19,19 @@ namespace DialogueLibrary
         }
         public override string ToString() 
         {
-            return $"{TextSpeaker}\n{DialogueText}";
+            return $"{DialogueText}";
         }
 
         //Read Only properties to access dialogueText and textSpeaker
         public string DialogueText
         {
             get => dialogueText;
+            set => dialogueText = value;
         }
         public Speaker TextSpeaker
         {
             get => textSpeaker;
+            set => textSpeaker = value;
         }
     }
 }
