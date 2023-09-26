@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DialogueLibrary;
 
 namespace DialogueLibrary
 {
@@ -17,7 +18,7 @@ namespace DialogueLibrary
             this.choicePreview = choicePreview;
             NextNode = choiceNode;
         }
-        public DialogueChoice(string choicePreview) 
+        public DialogueChoice(string choicePreview)
         {
             this.choicePreview = choicePreview;
         }

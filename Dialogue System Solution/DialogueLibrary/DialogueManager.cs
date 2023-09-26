@@ -46,7 +46,7 @@ namespace DialogueLibrary
             {
                 EndScene();
             }
-            
+
         }
         //Called when a the current node has receieved input and its time to move to the next node.
         private void MoveToNode(DialogueNode node)

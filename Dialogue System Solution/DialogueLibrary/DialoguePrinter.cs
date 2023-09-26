@@ -22,7 +22,7 @@ namespace DialogueLibrary
             TextToPrint = "";
 
             Console.WriteLine(node.Text.TextSpeaker);
-            string nodeText = $"{node}";
+            string nodeText = $"{node}\n";
 
             if (printOneAtATime)
             {
@@ -52,7 +52,7 @@ namespace DialogueLibrary
             }
 
             //print the final version of TextToPrint, which should now be the same as nodeText
-            Console.WriteLine($"{TextToPrint}");
+            Console.WriteLine($"{TextToPrint}\n");
             IsWriting = false;
         }
 

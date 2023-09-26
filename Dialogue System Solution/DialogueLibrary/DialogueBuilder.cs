@@ -79,7 +79,7 @@ namespace DialogueLibrary
             string currentSceneKey = "";
             string currentSpeakerKey = "";
             string currentNodeKey = "";
-            int nextNodeLineIndex;
+            int linesToSkip;
             int nodeCount = 0;
 
             for (int i = 0; i < lines.Length; i++)
@@ -103,8 +103,19 @@ namespace DialogueLibrary
 
                     //get the speaker of the node
                     currentSpeakerKey = lineSegments[0];
+                    
                     //if the speakers dictionary doesnt have our current speaker, add it
-                    if (!speakers.ContainsKey(currentSpeakerKey)) { speakers[currentSpeakerKey] = BuildSpeaker(currentSpeakerKey); }
+                    if (!speakers.ContainsKey(currentSpeakerKey.Split('/')[0])) 
+                    {
+                        string currentSpeakerColor = "white";
+                        if (currentSpeakerKey.Split('/').Length > 1)
+                        {
+                            currentSpeakerKey = lineSegments[0].Split('/')[0];
+                            currentSpeakerColor = lineSegments[0].Split('/')[1];
+                        }
+
+                        speakers[currentSpeakerKey] = BuildSpeaker(currentSpeakerKey, currentSpeakerColor); 
+                    }
                     //make a new text object with the current speaker and current text
                     Text currentText = new Text(lineSegments[1], speakers[currentSpeakerKey]);
 
@@ -131,10 +142,10 @@ namespace DialogueLibrary
                         nodes[currentNodeKey] = BuildNode();
                         nodes[currentNodeKey].Text = currentText;
 
-                        if (int.TryParse(lineSegments[lineSegments.Length - 1], out nextNodeLineIndex))
+                        if (int.TryParse(lineSegments[lineSegments.Length - 1], out linesToSkip))
                         {
                             //set the next node as the node on the specified index line
-                            nodes[currentNodeKey].NextNodeIndex = nextNodeLineIndex;
+                            nodes[currentNodeKey].NextNodeIndex = i + linesToSkip;
                         }
                         else
                         {
@@ -155,7 +166,7 @@ namespace DialogueLibrary
                         scenes[currentSceneKey].FirstNode = nodes[currentNodeKey];
                     }
                     //if the current node we're on is the designated next node for the next node in the queue, dequeue that node and make our current node that waiting node's next node
-                    if (waitingForNode.Peek().NextNodeIndex == i)
+                    while (waitingForNode.Peek().NextNodeIndex == i)
                     {
                         waitingForNode.Dequeue().NextNode = nodes[currentNodeKey];
                     }
@@ -167,7 +178,7 @@ namespace DialogueLibrary
     0 * Scene;Scene One
     1 * Rilee;Hello, World!
     2 * World;Hello, Rilee!;-Surprise;-Acceptance
-    3 * Rilee;Woah, I had no idea you could talk;5.
+    3 * Rilee;Woah, I had no idea you could talk;5
     4 * Rilee;I always knew you could talk. You're chill.;6
     5 * World;Well I can talk, and I'm talking to you.;7
     6 * World;I'm glad you think so. I feel seen.

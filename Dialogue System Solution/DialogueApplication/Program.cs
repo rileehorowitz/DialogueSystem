@@ -59,12 +59,14 @@ namespace DialogueApplication
             string[] lines = new string[]
             {
                 "Scene;Scene One",
-                "Rilee;Hello, World!",
-                "World;Hello, Rilee!;-Surprise;-Acceptance",
-                "Rilee;Woah, I had no idea you could talk;5",
-                "Rilee;I always knew you could talk. You're chill.;6",
-                "World;Well I can talk, and I'm talking to you.;7",
-                "World;I'm glad you think so. I feel seen.",
+                "Rilee/red;Hello, World!",
+                "World/cyan;Hello, Rilee!;-Surprise;-Acceptance;-Rejection",
+                "Rilee;Woah, I had no idea you could talk;3",
+                "Rilee;I always knew you could talk. You're chill.;3",
+                "Rilee;I'll never accept you, the world from Hello World isnt real!;3",
+                "World;Well I can talk, and I'm talking to you.;3",
+                "World;I'm glad you think so. I feel seen.;2",
+                "World;Noooooooooooooooooooooooo",
                 "Rilee;What a day, this is great!",
                 "End"
             };
