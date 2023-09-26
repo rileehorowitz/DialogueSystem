@@ -11,19 +11,18 @@ namespace DialogueLibrary
     {
         private DialogueNode? nextNode;
 
-        //Read Only public property to access nextNode
         public ConsoleKey ContinueKey { get; set; } = ConsoleKey.Spacebar;
         public DialogueNodeBasic(DialogueNode nextNode, Text text)
             : base(text)
         {
-            this.nextNode = nextNode;
+            NextNode = nextNode;
         }
         public DialogueNodeBasic() { }
 
         //When attempting to move to a new node, check if the new node is our current node's next node
         public override bool CanBeFollowedByNode(DialogueNode node)
         {
-            return nextNode == node;
+            return NextNode == node;
         }
         public override DialogueNode GetInputForNextNode()
         {
@@ -41,7 +40,7 @@ namespace DialogueLibrary
 
 
             } while (!isValidInput);
-            return nextNode;
+            return NextNode;
         }
     }
 }

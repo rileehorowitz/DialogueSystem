@@ -20,7 +20,7 @@ namespace DialogueLibrary
         {
             this.choices = choices;
         }
-        public DialogueNodeChoice() { }
+        private DialogueNode NextNode { get; set; }
         public override DialogueNode GetInputForNextNode()
         {
             bool isValidInput = false;
@@ -33,7 +33,7 @@ namespace DialogueLibrary
                 ConsoleKeyInfo choiceKey = Console.ReadKey(true);
                 isValidInput = (Int32.TryParse(choiceKey.KeyChar.ToString(), out choice) && choice <= Choices.Length && choice > 0);
             } while (!isValidInput);
-            NextNode = Choices[choice - 1].ChoiceNode;
+            NextNode = Choices[choice - 1].NextNode;
             return NextNode;
         }
 
@@ -51,7 +51,7 @@ namespace DialogueLibrary
         public override bool CanBeFollowedByNode(DialogueNode node)
         {
             //if the array of choices contains the passed in node, return true
-            return choices.Any(x => x.ChoiceNode == node);
+            return choices.Any(x => x.NextNode == node);
         }
         public override string ToString()
         {

@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace DialogueLibrary
 {
-    public abstract class DialogueNode
+    public abstract class DialogueNode : IHasNextNode
     {
         private Text text;
         private DialogueNode? nextNode;
 
-        //Read Only public property to access text and nextNode
-        public Text Text { get => text; }
+        public Text Text { get => text; set => text = value; }
         public DialogueNode NextNode { get; set; }
+        public int NextNodeIndex { get; set; }
 
         public DialogueNode(Text text) => this.text = text;
         public DialogueNode() { }

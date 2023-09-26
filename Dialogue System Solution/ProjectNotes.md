@@ -11,6 +11,9 @@ The goal of the project is to have an application that reads from a formatted te
 ## Classes
 Figure out what classes need to be written and what information each class would hold within the system.
 
+### Dialogue Builder
+a static class that has methods to instantiate all other class objects in the dialogue system. Will be used to automate instantiating objects for a dialogue scene.
+
 ### Dialogue Printer
 a static class that handles printing text to screen. Takes a node and can print all of its text or print one character at a time.
 

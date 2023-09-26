@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DialogueLibrary
 {
-    public class DialogueChoice
+    public class DialogueChoice : IHasNextNode
     {
         private string choicePreview;
         private DialogueNode choiceNode;
@@ -15,7 +15,11 @@ namespace DialogueLibrary
         public DialogueChoice(string choicePreview, DialogueNode choiceNode)
         {
             this.choicePreview = choicePreview;
-            this.choiceNode = choiceNode;
+            NextNode = choiceNode;
+        }
+        public DialogueChoice(string choicePreview) 
+        {
+            this.choicePreview = choicePreview;
         }
 
         public override string ToString()
@@ -23,11 +27,8 @@ namespace DialogueLibrary
             return ChoicePreview;
         }
 
-        //Read Only public properties to access NextNode and ChoicePreview
-        public DialogueNode ChoiceNode
-        {
-            get => choiceNode;
-        }
+        public DialogueNode NextNode { get; set; }
+        public int NextNodeIndex { get; set; }
         public string ChoicePreview
         {
             get => choicePreview;
