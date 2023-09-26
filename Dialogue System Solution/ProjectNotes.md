@@ -4,17 +4,15 @@ The goal of the project is to have an application that reads from a formatted te
 ## To Do
 - When automating the creation of Dialogue Objects as you read from a file, use a dictionary with string keys that hold the value of different object types so that you can dynamically assign names.
 
-- At the moment, project is on the tightly coupled side, try to go through and make it loosely coupled by putting in safety checks for errors. (What if something empty is passed in? What if this ends up being null when it's not supposed to be?)
+- Change where the manager and nodes check for input before accessing the next node. Probably not best to have it check for input inside the get for next node.
 
-- Change where the manager and nodes check for input before accessing the next node
-
-- Alter the wait time on the WriteText method to give greater pause to punctuation rather than letters or numbers.
-
-- Alter the wait time to speed up rather than fully skip
+- Make DialogueNode an interface so you can check if a passed in node is a basic or choice node within a method, rather than having all the logic for determining input or choices be soley in the node code itself.
 
 ## Classes
 Figure out what classes need to be written and what information each class would hold within the system.
 
+### Dialogue Printer
+a static class that handles printing text to screen. Takes a node and can print all of its text or print one character at a time.
 
 ### Dialogue Scene
 an object that denotes a single "scene" or "conversation"

@@ -75,7 +75,30 @@ namespace DialogueLibrary
                 return;
             }
             //if input is good go to the next node
-            MoveToNode(node.NextNode);
-        } 
+
+            //MoveToNode(GetNextNode(node));
+            MoveToNode(node.GetInputForNextNode());
+        }
+
+        //private DialogueNode GetNextNode(DialogueNode node)
+        //{
+        //    bool isValidInput = false;
+
+        //    do
+        //    {
+        //        //clear any previous inputs
+        //        while (Console.KeyAvailable) Console.ReadKey(true);
+
+        //        //get the user input when trying to access the next node and check if its the correct input to continue (Spacebar)
+        //        ConsoleKeyInfo inputKey = Console.ReadKey(true);
+
+        //        //ONLY WORKS FOR BASIC NODES SO FAR
+        //        isValidInput = inputKey.Key == node.ContinueKey;
+
+
+        //    } while (!isValidInput);
+
+        //    return node.NextNode;
+        //}
     }
 }

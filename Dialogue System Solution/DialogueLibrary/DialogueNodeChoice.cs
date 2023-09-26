@@ -12,17 +12,16 @@ namespace DialogueLibrary
         private DialogueChoice[] choices;
 
         //Read Only public property to access nextNode and choices
-        public override DialogueNode NextNode { get => MakeChoice(); }
 
-        public DialogueChoice[] Choices { get => choices; }
+        public DialogueChoice[] Choices { get => choices; set => choices = value; }
 
         public DialogueNodeChoice(DialogueChoice[] choices, Text text)
             : base(text)
         {
             this.choices = choices;
         }
-
-        private DialogueNode MakeChoice()
+        public DialogueNodeChoice() { }
+        public override DialogueNode GetInputForNextNode()
         {
             bool isValidInput = false;
             int choice;
@@ -34,8 +33,8 @@ namespace DialogueLibrary
                 ConsoleKeyInfo choiceKey = Console.ReadKey(true);
                 isValidInput = (Int32.TryParse(choiceKey.KeyChar.ToString(), out choice) && choice <= Choices.Length && choice > 0);
             } while (!isValidInput);
-           
-            return Choices[choice - 1].ChoiceNode;
+            NextNode = Choices[choice - 1].ChoiceNode;
+            return NextNode;
         }
 
         public string GetChoicesText()

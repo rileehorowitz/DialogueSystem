@@ -9,7 +9,7 @@ namespace DialogueLibrary
     public static class DialoguePrinter
     {
         private const int LetterWriteDelay = 50;
-        private const int CommaWriteDelay = 100;
+        private const int CommaWriteDelay = 150;
         private const int PunctuationWriteDelay = 200;
 
         public static bool IsWriting { get; private set; }
@@ -31,6 +31,24 @@ namespace DialogueLibrary
             else
             {
                 TextToPrint = nodeText;
+            }
+
+            //print the final version of TextToPrint, which should now be the same as nodeText
+            Console.WriteLine($"{TextToPrint}");
+            IsWriting = false;
+        }
+        public static void PrintText(string text, bool printOneAtATime)
+        {
+            IsWriting = true;
+            TextToPrint = "";
+
+            if (printOneAtATime)
+            {
+                PrintOneCharAtATime(text);
+            }
+            else
+            {
+                TextToPrint = text;
             }
 
             //print the final version of TextToPrint, which should now be the same as nodeText

@@ -10,13 +10,17 @@ namespace DialogueLibrary
     {
         private Text text;
         private DialogueNode? nextNode;
+
         //Read Only public property to access text and nextNode
         public Text Text { get => text; }
-        public abstract DialogueNode NextNode { get; }
+        public DialogueNode NextNode { get; set; }
 
         public DialogueNode(Text text) => this.text = text;
+        public DialogueNode() { }
 
         public abstract bool CanBeFollowedByNode(DialogueNode node);
+
+        public abstract DialogueNode GetInputForNextNode();
 
         public override string ToString()
         {
