@@ -19,6 +19,10 @@ namespace DialogueLibrary
             if (currentScene == null)
             {
                 currentScene = scene;
+                if(currentScene.Description != "" || currentScene.Description != null)
+                {
+                    DialoguePrinter.PrintText(currentScene.Description, true);
+                }
                 StartNode(currentScene.FirstNode);
             }
             //Else, we're already in a scene
@@ -27,8 +31,17 @@ namespace DialogueLibrary
         {
             if (currentScene != null)
             {
-                currentScene = null;
-            }//Else, we aren't in a scene
+                if (currentScene.NextScene != null)
+                {
+                    Scene nextScene = currentScene.NextScene;
+                    currentScene = null;
+                    StartScene(nextScene);
+                }
+                else
+                {
+                    currentScene = null;
+                }
+            }
             if (currentNode != null)
             {
                 currentNode = null;

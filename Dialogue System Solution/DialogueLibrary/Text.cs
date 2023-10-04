@@ -17,6 +17,11 @@ namespace DialogueLibrary
             this.dialogueText = dialogueText;
             this.textSpeaker = textSpeaker;
         }
+        public Text(string dialogueText)
+        {
+            this.dialogueText = dialogueText;
+            this.textSpeaker = null;
+        }
         public override string ToString() 
         {
             return $"{DialogueText}";

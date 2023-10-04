@@ -5,70 +5,30 @@ namespace DialogueApplication
     {
         static void Main(string[] args)
         {
-            //Speaker speakerOne = new Speaker("Rilee", "red");
-            //Speaker speakerTwo = new Speaker("World", "cyan");
-
-            //Text textOne = new Text("Hello, World!", speakerOne);
-            //Text textTwo = new Text("Hello, Rilee!", speakerTwo);
-            //Text textThree = new Text("Woah, who said that?", speakerOne);
-            //Text textFour = new Text("Oh my god, the world in \"Hello, World!\" can talk? I'm such a huge fan.", speakerOne);
-            //Text textFive = new Text("Well, I do love meeting my fans.", speakerTwo);
-            //Text textSix = new Text("Wow, you're great, World", speakerOne);
-
-            //DialogueNodeBasic dialogueNodeSix = new DialogueNodeBasic(null, textSix);
-            //DialogueNodeBasic dialogueNodeFive = new DialogueNodeBasic(dialogueNodeSix, textFive);
-            //DialogueNodeBasic dialogueNodeFour = new DialogueNodeBasic(dialogueNodeFive, textFour);
-            //DialogueNodeBasic dialogueNodeThree = new DialogueNodeBasic(dialogueNodeFour, textThree);
-            //DialogueNodeBasic dialogueNodeTwo = new DialogueNodeBasic(dialogueNodeThree, textTwo);
-            //DialogueNodeBasic dialogueNodeOne = new DialogueNodeBasic(dialogueNodeTwo, textOne);
-
-            //Scene sceneOne = new Scene(dialogueNodeOne);
-            //DialogueManager manager = new DialogueManager(sceneOne);
-
-            //Text cTextOne = new Text("Hello, World!", speakerOne);
-            //Text cTextTwo = new Text("Hello, Rilee!", speakerTwo);
-            //Text cTextThreeA = new Text("Woah, who said that?", speakerOne);
-            //Text cTextThreeB = new Text("Oh my god, the world in \"Hello, World!\" can talk? I'm such a huge fan.", speakerOne);
-            //Text cTextFourA = new Text("It's me, the world from \"Hello, World!\" Don't you like me?", speakerTwo);
-            //Text cTextFourB = new Text("Well, I do love meeting my fans. I'm glad you like me!", speakerTwo);
-            //Text cTextFive = new Text("I like you a lot, World. <3", speakerOne);
-
-            //DialogueNodeBasic choiceNodeFive = new DialogueNodeBasic(null, cTextFive);
-
-            //DialogueNodeBasic choiceNodeFourA = new DialogueNodeBasic(choiceNodeFive, cTextFourA);
-            //DialogueNodeBasic choiceNodeFourB = new DialogueNodeBasic(choiceNodeFive, cTextFourB);
-
-            //DialogueNodeBasic choiceNodeThreeA = new DialogueNodeBasic(choiceNodeFourA, cTextThreeA);
-            //DialogueNodeBasic choiceNodeThreeB = new DialogueNodeBasic(choiceNodeFourB, cTextThreeB);
-
-            //DialogueChoice choiceOne = new DialogueChoice("Who Said That?", choiceNodeThreeA);
-            //DialogueChoice choiceTwo = new DialogueChoice("World? I'm a Huge Fan", choiceNodeThreeB);
-
-            //DialogueChoice[] choices = new DialogueChoice[2]{
-            //    choiceOne,
-            //    choiceTwo
-            //};
-
-            //DialogueNodeChoice choiceNodeTwo = new DialogueNodeChoice(choices, cTextTwo);
-            //DialogueNodeBasic choiceNodeOne = new DialogueNodeBasic(choiceNodeTwo, cTextOne);
-
-            //Scene sceneTwo = new Scene(choiceNodeOne);
-            //manager.StartScene(sceneTwo);
-
-
             string[] lines = new string[]
             {
-                "Scene;Scene One",
-                "Rilee/red;Hello, World!",
-                "World/cyan;Hello, Rilee!;-Surprise;-Acceptance;-Rejection",
-                "Rilee;Woah, I had no idea you could talk;3",
-                "Rilee;I always knew you could talk. You're chill.;3",
-                "Rilee;I'll never accept you, the world from Hello World isnt real!;3",
-                "World;Well I can talk, and I'm talking to you.;3",
-                "World;I'm glad you think so. I feel seen.;2",
-                "World;Noooooooooooooooooooooooo",
-                "Rilee;What a day, this is great!",
+                "Scene|Scene One|An Imperial sled driving four penguin prisoners down an icy tundra road. All are seated and bound; the one dressed in finery is gagged.",
+                "Ralof/cyan|Hey, you. You’re finally awake. You were trying to cross the border, right? Walked right into that Imperial ambush, same as us, and that thief over there.",
+                "Little Lokir/red|Damn you Macaroni penguins. The Tundra was fine until you came along. Emperor penguins were nice and lazy.",
+                "Little Lokir|If they hadn’t been looking for you, I could’ve stolen that seal and been half way to Glacierfell.",
+                "Little Lokir|You there. You and me — we shouldn't be here. It’s these Macaroni the Emperors want.|-Remain Silent|-Agree With Lokir",
+                "...|2",
+                "You nod an affirmation",
+                "Ralof|We’re all huddle-mates in binds now, thief.",
+                "Emperor Soldier/yellow|Shut up back there!",
+                "Little Lokir looks at the gagged man.",
+                "Little Lokir|And what's wrong with him?",
+                "Ralof|Watch your beak! You're speaking to Ulfric Macaroni, the true High King of Victorian London.",
+                "Little Lokir|Ulfric? The Duke of Wimblehelm? You're the leader of the rebellion! But if they captured you... Oh lights, where are they taking us?",
+                "The gagged man says nothing, but does seem to have an air of Macaroni royalty to him. You've never seen a more dignified Macaroni penguin.",
+                "Ralof|I don't know where we're going, but the Northern Lights await.",
+                "You approach a large city: Victorian London. An Emperor soldier calls out to the lead sled.",
+                "Emperor Soldier|General, sir! The iceman is waiting!",
+                "Emperor General/yellow|Good. Let's get this over with.",
+                "End|Scene Two",
+                "Scene|Scene Two|Smoke and soot choke the air in the middle of Victorian London. In the town square, the Emperor penguins prepare to sentence their new prisoners.",
                 "End"
+
             };
             DialogueBuilder.BuildFromText(lines);
             DialogueManager manager = new DialogueManager();

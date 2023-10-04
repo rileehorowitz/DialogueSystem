@@ -20,8 +20,10 @@ namespace DialogueLibrary
         {
             IsWriting = true;
             TextToPrint = "";
-
-            Console.WriteLine(node.Text.TextSpeaker);
+            if (node.Text.TextSpeaker != null)
+            {
+                Console.WriteLine(node.Text.TextSpeaker);
+            }
             string nodeText = $"{node}\n";
 
             if (printOneAtATime)

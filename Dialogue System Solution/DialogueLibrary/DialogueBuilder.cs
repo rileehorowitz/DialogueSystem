@@ -8,7 +8,7 @@ namespace DialogueLibrary
 {
     public static class DialogueBuilder
     {
-        public const char SplitChar = ';';
+        public const char SplitChar = '|';
         public static Scene BuildScene()
         {
             return new Scene();
@@ -89,36 +89,60 @@ namespace DialogueLibrary
                 if (lineSegments[0].Equals("Scene"))
                 {
                     //starting a new scene
-                    currentSceneKey = lineSegments[lineSegments.Length - 1];
-                    scenes[currentSceneKey] = BuildScene();
+                    currentSceneKey = lineSegments[1];
+                    if (!scenes.ContainsKey(currentSceneKey))
+                    {
+                        scenes[currentSceneKey] = BuildScene();
+                    }
+                    if (lineSegments.Length > 2)
+                    {
+                        scenes[currentSceneKey].Description = lineSegments[2];
+                    }
                 }
                 else if (lineSegments[0].Equals("End"))
                 {
                     //we are ending a scene
-                    waitingForNode.Dequeue().NextNode = null;
+                    if (waitingForNode.Count > 0)
+                    {
+                        waitingForNode.Dequeue().NextNode = null;
+                    }
+                    if (lineSegments.Length > 1)
+                    {
+                        if (!scenes.ContainsKey(lineSegments[1]))
+                        {
+                            scenes[lineSegments[1]] = BuildScene();
+                        }
+                        scenes[currentSceneKey].NextScene = scenes[lineSegments[1]];
+                    }
                 }
                 else
                 {
                     //we are in a scene
-
-                    //get the speaker of the node
-                    currentSpeakerKey = lineSegments[0];
-                    
-                    //if the speakers dictionary doesnt have our current speaker, add it
-                    if (!speakers.ContainsKey(currentSpeakerKey.Split('/')[0])) 
+                    Text currentText;
+                    if (lineSegments.Length <= 1 || lineSegments.Length <= 2 && int.TryParse(lineSegments[lineSegments.Length - 1], out linesToSkip))
                     {
-                        string currentSpeakerColor = "white";
-                        if (currentSpeakerKey.Split('/').Length > 1)
-                        {
-                            currentSpeakerKey = lineSegments[0].Split('/')[0];
-                            currentSpeakerColor = lineSegments[0].Split('/')[1];
-                        }
-
-                        speakers[currentSpeakerKey] = BuildSpeaker(currentSpeakerKey, currentSpeakerColor); 
+                        currentText = new Text(lineSegments[0]);
                     }
-                    //make a new text object with the current speaker and current text
-                    Text currentText = new Text(lineSegments[1], speakers[currentSpeakerKey]);
+                    else
+                    {
+                        //get the speaker of the node
+                        currentSpeakerKey = lineSegments[0];
 
+                        //if the speakers dictionary doesnt have our current speaker, add it
+                        if (!speakers.ContainsKey(currentSpeakerKey.Split('/')[0]))
+                        {
+                            string currentSpeakerColor = "white";
+                            if (currentSpeakerKey.Split('/').Length > 1)
+                            {
+                                currentSpeakerKey = lineSegments[0].Split('/')[0];
+                                currentSpeakerColor = lineSegments[0].Split('/')[1];
+                            }
+
+                            speakers[currentSpeakerKey] = BuildSpeaker(currentSpeakerKey, currentSpeakerColor);
+                        }
+                        //make a new text object with the current speaker and current text
+                        currentText = new Text(lineSegments[1], speakers[currentSpeakerKey]);
+                    }
                     currentNodeKey = $"node{nodeCount}";
                     nodeCount++;
 
@@ -128,9 +152,9 @@ namespace DialogueLibrary
                         DialogueChoice[] choices = new DialogueChoice[lineSegments.Length - 2];
                         for (int j = 2; j < lineSegments.Length; j++)
                         {
-                            choices[j-2] = BuildChoice(lineSegments[j].Substring(1));
-                            choices[j-2].NextNodeIndex = i + (j - 1);
-                            waitingForNode.Enqueue(choices[j-2]);
+                            choices[j - 2] = BuildChoice(lineSegments[j].Substring(1));
+                            choices[j - 2].NextNodeIndex = i + (j - 1);
+                            waitingForNode.Enqueue(choices[j - 2]);
                         }
                         nodes[currentNodeKey] = BuildNode(choices, currentText);
                     }

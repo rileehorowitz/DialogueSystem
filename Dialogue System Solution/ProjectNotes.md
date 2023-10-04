@@ -2,7 +2,8 @@
 The goal of the project is to have an application that reads from a formatted text file and creates a system of nodes that it them moves through, displaying dialogue and following a scene from node to node. 
 
 ## To Do
-- When automating the creation of Dialogue Objects as you read from a file, use a dictionary with string keys that hold the value of different object types so that you can dynamically assign names.
+- Have the Scene object hold a dictionary of Speaker objects with string keys, that identifies all the speakers present in that scene. 
+- - Also have the number of nodes stored in the Scene
 
 - Change where the manager and nodes check for input before accessing the next node. Probably not best to have it check for input inside the get for next node.
 
