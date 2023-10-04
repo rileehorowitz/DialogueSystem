@@ -2,12 +2,9 @@
 The goal of the project is to have an application that reads from a formatted text file and creates a system of nodes that it them moves through, displaying dialogue and following a scene from node to node. 
 
 ## To Do
-- Have the Scene object hold a dictionary of Speaker objects with string keys, that identifies all the speakers present in that scene. 
-- - Also have the number of nodes stored in the Scene
+- Edit the DialogueBuilder so that a scene can have multiple next scenes, and reaching an end will communicate which next scene is correct.
 
-- Change where the manager and nodes check for input before accessing the next node. Probably not best to have it check for input inside the get for next node.
-
-- Make DialogueNode an interface so you can check if a passed in node is a basic or choice node within a method, rather than having all the logic for determining input or choices be soley in the node code itself.
+- Fix error where dialogue line gets printed twice if we reach the bottom of the console window and the line is allowed to print out completely
 
 ## Classes
 Figure out what classes need to be written and what information each class would hold within the system.

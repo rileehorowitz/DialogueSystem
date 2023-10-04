@@ -54,7 +54,7 @@ namespace DialogueLibrary
             }
 
             //print the final version of TextToPrint, which should now be the same as nodeText
-            Console.WriteLine($"{TextToPrint}\n");
+            Console.WriteLine($"{TextToPrint}");
             IsWriting = false;
         }
 
@@ -68,15 +68,21 @@ namespace DialogueLibrary
                 //determine delay based on what current character we're adding
                 char lastChar = TextToPrint[TextToPrint.Length - 1];
                 DetermineDelay(lastChar);
-
-                //store what line the dialogue starts on
-                int startLine = Console.CursorTop;
+                int lines = 0;
+                foreach(char character in TextToPrint)
+                {
+                    if(character == '\n')
+                    {
+                        lines++;
+                    }
+                }
 
                 //print the current displayText
                 Console.Write($"{TextToPrint}");
 
-                //store what line the dialogue ends on
+                //store what line the dialogue ends on and starts on
                 int endLine = Console.CursorTop;
+                int startLine = endLine - lines;
 
                 //wait so we get the appearance of typing
                 Thread.Sleep(WriteDelay);
@@ -94,7 +100,7 @@ namespace DialogueLibrary
 
         private static void ClearConsoleLines(int startLine, int endLine)
         {
-            for (int i = startLine; i < endLine; i++)
+            for (int i = startLine; i <= endLine; i++)
             {
                 Console.SetCursorPosition(0, i);
                 Console.Write(new string(' ', Console.WindowWidth));
