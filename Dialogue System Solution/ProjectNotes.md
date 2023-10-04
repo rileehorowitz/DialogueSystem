@@ -4,7 +4,7 @@ The goal of the project is to have an application that reads from a formatted te
 ## To Do
 - Edit the DialogueBuilder so that a scene can have multiple next scenes, and reaching an end will communicate which next scene is correct.
 
-- Fix error where dialogue line gets printed twice if we reach the bottom of the console window and the line is allowed to print out completely
+- Have text wrap on a word-by-word basis instead of character-by-character
 
 ## Classes
 Figure out what classes need to be written and what information each class would hold within the system.

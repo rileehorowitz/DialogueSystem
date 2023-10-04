@@ -24,7 +24,27 @@ namespace DialogueLibrary
             {
                 Console.WriteLine(node.Text.TextSpeaker);
             }
-            string nodeText = $"{node}\n";
+            string nodeText = $"{node}";
+
+            //add line breaks where necessary to fit within the console
+            if (nodeText.Length > Console.WindowWidth)
+            {
+                string[] words = nodeText.Split(" ");
+                int indexCount = 0;
+                int lineCount = 0;
+                foreach (string word in words)
+                {
+                    indexCount += word.Length;
+                    lineCount += word.Length;
+                    if (lineCount > Console.WindowWidth)
+                    {
+                        nodeText = nodeText.Insert(indexCount - word.Length, "\n");
+                        lineCount = word.Length;
+                    }
+                    indexCount++;
+                    lineCount++;
+                }
+            }
 
             if (printOneAtATime)
             {
@@ -36,13 +56,33 @@ namespace DialogueLibrary
             }
 
             //print the final version of TextToPrint, which should now be the same as nodeText
-            Console.WriteLine($"{TextToPrint}");
+            Console.WriteLine($"{TextToPrint}\n");
             IsWriting = false;
         }
         public static void PrintText(string text, bool printOneAtATime)
         {
             IsWriting = true;
             TextToPrint = "";
+
+            //add line breaks where necessary to fit within the console
+            if (text.Length > Console.WindowWidth)
+            {
+                string[] words = text.Split(" ");
+                int indexCount = 0;
+                int lineCount = 0;
+                foreach (string word in words)
+                {
+                    indexCount += word.Length;
+                    lineCount += word.Length;
+                    if (lineCount > Console.WindowWidth)
+                    {
+                        text = text.Insert(indexCount - word.Length, "\n");
+                        lineCount = word.Length;
+                    }
+                    indexCount++;
+                    lineCount++;
+                }
+            }
 
             if (printOneAtATime)
             {
@@ -54,26 +94,28 @@ namespace DialogueLibrary
             }
 
             //print the final version of TextToPrint, which should now be the same as nodeText
-            Console.WriteLine($"{TextToPrint}");
+            Console.WriteLine($"{TextToPrint}\n");
             IsWriting = false;
         }
 
         private static void PrintOneCharAtATime(string nodeText)
         {
+            
             for (int i = 0; i < nodeText.Length; i++)
             {
                 //store the current chunk of the full dialogue text
                 TextToPrint = nodeText.Substring(0, i + 1);
-
+                
                 //determine delay based on what current character we're adding
                 char lastChar = TextToPrint[TextToPrint.Length - 1];
                 DetermineDelay(lastChar);
-                int lines = 0;
+
+                int lineBreaks = 0;
                 foreach(char character in TextToPrint)
                 {
                     if(character == '\n')
                     {
-                        lines++;
+                        lineBreaks++;
                     }
                 }
 
@@ -82,7 +124,7 @@ namespace DialogueLibrary
 
                 //store what line the dialogue ends on and starts on
                 int endLine = Console.CursorTop;
-                int startLine = endLine - lines;
+                int startLine = endLine - lineBreaks;
 
                 //wait so we get the appearance of typing
                 Thread.Sleep(WriteDelay);
