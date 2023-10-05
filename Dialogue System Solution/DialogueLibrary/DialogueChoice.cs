@@ -29,7 +29,7 @@ namespace DialogueLibrary
         }
 
         public DialogueNode NextNode { get; set; }
-        public int NextNodeIndex { get; set; }
+        public int NextNodeKey { get; set; }
         public string ChoicePreview
         {
             get => choicePreview;

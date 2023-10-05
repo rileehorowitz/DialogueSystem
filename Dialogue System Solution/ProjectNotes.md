@@ -4,7 +4,7 @@ The goal of the project is to have an application that reads from a formatted te
 ## To Do
 - Edit the DialogueBuilder so that a scene can have multiple next scenes, and reaching an end will communicate which next scene is correct.
 
-- Have text wrap on a word-by-word basis instead of character-by-character
+- When building from text, assign next node based on the string key so that if a node is already created, it can be assigned next node by calling its key, and if it is not created, it can be assigned when it is.
 
 ## Classes
 Figure out what classes need to be written and what information each class would hold within the system.

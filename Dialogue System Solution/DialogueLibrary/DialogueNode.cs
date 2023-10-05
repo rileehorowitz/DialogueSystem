@@ -13,7 +13,7 @@ namespace DialogueLibrary
 
         public Text Text { get => text; set => text = value; }
         public DialogueNode NextNode { get; set; }
-        public int NextNodeIndex { get; set; }
+        public int NextNodeKey { get; set; }
 
         public DialogueNode(Text text) => this.text = text;
         public DialogueNode() { }

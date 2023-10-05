@@ -9,6 +9,6 @@ namespace DialogueLibrary
     public interface IHasNextNode
     {
         public DialogueNode NextNode { get; set; }
-        public int NextNodeIndex { get; set; }
+        public int NextNodeKey { get; set; }
     }
 }

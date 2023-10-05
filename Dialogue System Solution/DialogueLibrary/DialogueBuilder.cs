@@ -70,7 +70,7 @@ namespace DialogueLibrary
         }
 
         public static Dictionary<string, Scene> scenes = new Dictionary<string, Scene>();
-        public static Dictionary<string, DialogueNode> nodes = new Dictionary<string, DialogueNode>();
+        public static Dictionary<int, DialogueNode> nodes = new Dictionary<int, DialogueNode>();
         public static Dictionary<string, Speaker> speakers = new Dictionary<string, Speaker>();
         //Method takes in an array of lines of text and determines what do do with it
         public static void BuildFromText(string[] lines)
@@ -78,7 +78,7 @@ namespace DialogueLibrary
             Queue<IHasNextNode> waitingForNode = new Queue<IHasNextNode>();
             string currentSceneKey = "";
             string currentSpeakerKey = "";
-            string currentNodeKey = "";
+            int currentNodeKey;
             int linesToSkip;
             int nodeCount = 0;
 
@@ -143,17 +143,17 @@ namespace DialogueLibrary
                         //make a new text object with the current speaker and current text
                         currentText = new Text(lineSegments[1], speakers[currentSpeakerKey]);
                     }
-                    currentNodeKey = $"node{nodeCount}";
+                    currentNodeKey = i;
                     nodeCount++;
 
-                    if (lineSegments[lineSegments.Length - 1].StartsWith("-"))
+                    if (lineSegments[lineSegments.Length - 1].StartsWith("~"))
                     {
                         //we are looking at a Choice Node
                         DialogueChoice[] choices = new DialogueChoice[lineSegments.Length - 2];
                         for (int j = 2; j < lineSegments.Length; j++)
                         {
                             choices[j - 2] = BuildChoice(lineSegments[j].Substring(1));
-                            choices[j - 2].NextNodeIndex = i + (j - 1);
+                            choices[j - 2].NextNodeKey = i + (j - 1);
                             waitingForNode.Enqueue(choices[j - 2]);
                         }
                         nodes[currentNodeKey] = BuildNode(choices, currentText);
@@ -169,44 +169,29 @@ namespace DialogueLibrary
                         if (int.TryParse(lineSegments[lineSegments.Length - 1], out linesToSkip))
                         {
                             //set the next node as the node on the specified index line
-                            nodes[currentNodeKey].NextNodeIndex = i + linesToSkip;
+                            nodes[currentNodeKey].NextNodeKey = i + linesToSkip;
                         }
                         else
                         {
                             //set the next node as the node on the following line
-                            nodes[currentNodeKey].NextNodeIndex = i + 1;
+                            nodes[currentNodeKey].NextNodeKey = i + 1;
                         }
                         //add this node to the queue of nodes waiting for a next node
                         waitingForNode.Enqueue(nodes[currentNodeKey]);
-                    }
-
-                    if (lineSegments[0].StartsWith("-"))
-                    {
-                        //we are looking at a node that follows a choice
                     }
 
                     if (scenes[currentSceneKey].FirstNode == null)
                     {
                         scenes[currentSceneKey].FirstNode = nodes[currentNodeKey];
                     }
-                    //if the current node we're on is the designated next node for the next node in the queue, dequeue that node and make our current node that waiting node's next node
-                    while (waitingForNode.Peek().NextNodeIndex == i)
+                    //if the current node we're on is the designated next node for the next node in the queue, or the designated next node for a node in the queue has already been created, dequeue that node and make our current node that waiting node's next node
+                    while (waitingForNode.Count > 0 && waitingForNode.Peek().NextNodeKey <= i)
                     {
-                        waitingForNode.Dequeue().NextNode = nodes[currentNodeKey];
+                        int key = waitingForNode.Peek().NextNodeKey;
+                        waitingForNode.Dequeue().NextNode = nodes[key];
                     }
                 }
             }
         }
     }
-    /*
-    0 * Scene;Scene One
-    1 * Rilee;Hello, World!
-    2 * World;Hello, Rilee!;-Surprise;-Acceptance
-    3 * Rilee;Woah, I had no idea you could talk;5
-    4 * Rilee;I always knew you could talk. You're chill.;6
-    5 * World;Well I can talk, and I'm talking to you.;7
-    6 * World;I'm glad you think so. I feel seen.
-    7 * Rilee;What a day, this is great!
-    8 * End
-     */
 }
